@@ -24,7 +24,10 @@
 
 #include <iostream>
 #include <string.h>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
+using namespace std::chrono;
 
 int main() {
     
@@ -121,34 +124,48 @@ int main() {
 //    }
     
     //reverse mirrored pyramid
-    int i = 0;
-    string _num = "";
-    string _rnum = "";
-    string _numAsString = "";
-    string _rnumAsString = "";
+//    int i = 0;
+//    string _num = "";
+//    string _rnum = "";
+//    string _numAsString = "";
+//    string _rnumAsString = "";
+//    
+//    for (i ; i <= 10 ;i++) {
+//        
+//        _numAsString = to_string(i); 
+//        _num.append(_numAsString + " ");
+//        cout << _num << endl;
+//        
+//        
+//        if (i == 10) {
+//        
+//            for (int j = 10 ; j >= 0 ;j--) {
+//                
+//                _rnumAsString = to_string(j); 
+//                _rnum.append(_rnumAsString + " ");
+//                cout << _rnum << endl;
+//            
+//            }    
+//        }
+//    }
     
-    for (i ; i <= 10 ;i++) {
-        
-        _numAsString = to_string(i); 
-        _num.append(_numAsString + " ");
-        cout << _num << endl;
-        
-        
-        if (i == 10) {
-        
-            for (int j = 10 ; j >= 0 ;j--) {
-                
-                _rnumAsString = to_string(j); 
-                _rnum.append(_rnumAsString + " ");
-                cout << _rnum << endl;
-            
-            }
-            
-        }
-        
-        
-    }
+    
+    // below routine is to calculate the for loop processing time
+//    int x ,y ;
+//    x = time(0);
+//    for (int i = 0 ;i <= 100000 ;i++) {
+//    
+//        cout << time(0) << endl;
+//        y  = time(0);
+//    }
+//    cout << "This for loop running time :"<< (y - x) << endl;
+//    
+      //time fab
+//    time_t now = time(0);
+//    tm* localtm = localtime(&now);
+//    cout << "The local date and time is: " << asctime(localtm) << endl;
     
     
     return 0;
 }
+
