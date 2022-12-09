@@ -29,6 +29,48 @@
 using namespace std;
 using namespace std::chrono;
 
+
+// below prototypes & functions are for recursion
+void recursion (int x); //function prototype
+int  multiplier (int n);
+int  summation (int x ,int y);
+void shapes (int x);
+
+
+void recursion(int x) {
+
+    if (x < 1)
+        return;
+    else
+        cout << x << endl;
+    recursion(x - 1);
+
+}
+
+int multiplier(int n) {
+    
+    if (n == 1)
+        return 1;
+    
+    else
+        
+        return n * multiplier(n - 1);
+    
+}
+
+int summation (int x ,int y) {
+
+    if (x == y)
+        return x;
+    
+    else
+        return y + summation(x ,(y - 1));
+
+}
+// End of recursion prototypes & functions
+
+
+
 int main() {
     
 //    std::cout << "Hello My World! \n";
@@ -165,7 +207,19 @@ int main() {
 //    tm* localtm = localtime(&now);
 //    cout << "The local date and time is: " << asctime(localtm) << endl;
     
+    //recursive
+    //recursion is to call a function inside itself
+    //recursion is most likely a loop whithout a loop!
+    
+    
+    //begin of recursion implementation
+    int x = 4 ,y = 6;
+    
+    recursion(x);
+    cout << multiplier(x) << endl;
+    cout << summation(x ,y) << endl;
+    //end of recursion implementation
+    
     
     return 0;
 }
-
