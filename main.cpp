@@ -26,11 +26,13 @@
 #include <string.h>
 #include <cstdlib>
 #include <ctime>
+#include <array>
 using namespace std;
 using namespace std::chrono;
 
 
 // below prototypes & functions are for recursion
+/*
 void recursion (int x); //function prototype
 int  multiplier (int n);
 int  summation (int x ,int y);
@@ -68,7 +70,7 @@ int summation (int x ,int y) {
 
 }
 // End of recursion prototypes & functions
-
+*/
 
 
 int main() {
@@ -213,13 +215,80 @@ int main() {
     
     
     //begin of recursion implementation
-    int x = 4 ,y = 6;
+    /*
+     int x = 4 ,y = 6;
     
     recursion(x);
     cout << multiplier(x) << endl;
     cout << summation(x ,y) << endl;
+     */
     //end of recursion implementation
     
+    
+    
+    //one dimensional array!
+    
+    int arr[] = {200 ,1001 ,320 ,90 ,300 ,500 ,89 ,999 ,2 ,376 ,-1};
+    
+    //1 - finding the sum of array elements
+    int arrSum = 0;
+    
+    for (int i = 0; i < 5 ;i++) {
+    
+        arrSum += arr[i];
+    
+    }
+    
+    cout << "Array Sum = " << arrSum << endl;
+    
+    //2 - finding the max int number inside an array
+    int max        = 0;
+    int inc        = 0;
+    
+    
+    for (inc ;inc < 9 ;inc++) {
+        
+        if (arr[inc] > max) {
+            max = arr[inc];
+        }
+        
+            
+    }
+    cout << max << endl;
+    
+    //3 - finding the min number iside an array
+    int min        = arr[0];
+    int inc        = 0;
+    
+    
+    for (inc ;inc < 11 ;inc++) {
+        
+        if (arr[inc] < min) {
+            min = arr[inc];
+        } else {
+            min = arr[0];
+        }
+        
+            
+    }
+    cout << min << endl;
+    
+    // 4 - serching for the index of an value inside an array
+    
+    int searchIndex        = 0;
+    int inc                = 0;
+    int val = 89;
+    
+    
+    for (inc ;inc < 11 ;inc++) {
+        
+        if (arr[inc] == val) {
+            searchIndex = inc;
+        } 
+    }
+    cout << searchIndex << endl;
+    
+
     
     return 0;
 }
