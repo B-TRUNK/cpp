@@ -73,6 +73,34 @@ int summation (int x ,int y) {
 */
 
 
+
+// set array as a parameter to function
+void setArray(int array[] ,int s) {
+    
+
+    for (int z = 0 ;z < s ;z++) {
+        
+        cout << "Enter a new value: " << endl;
+        cin >> array[z];
+        
+    }
+
+}
+
+// print array function
+void printArray(int array[] ,int s) {
+    
+
+    for (int z = 0 ;z < s ;z++) {
+        
+        cout << array[z] << endl;
+        
+        
+    }
+
+}
+
+
 int main() {
     
 //    std::cout << "Hello My World! \n";
@@ -228,67 +256,73 @@ int main() {
     
     //one dimensional array!
     
-    int arr[] = {200 ,1001 ,320 ,90 ,300 ,500 ,89 ,999 ,2 ,376 ,-1};
+    int arr[] = {200 ,1001 ,-23 ,90 ,300 ,-4 ,89 ,-19 ,2 ,376};
     
     //1 - finding the sum of array elements
-    int arrSum = 0;
-    
-    for (int i = 0; i < 5 ;i++) {
-    
-        arrSum += arr[i];
-    
-    }
-    
-    cout << "Array Sum = " << arrSum << endl;
+//    int arrSum = 0;
+//    
+//    for (int i = 0; i < 5 ;i++) {
+//    
+//        arrSum += arr[i];
+//    
+//    }
+//    
+//    cout << "Array Sum = " << arrSum << endl;
     
     //2 - finding the max int number inside an array
-    int max        = 0;
-    int inc        = 0;
-    
-    
-    for (inc ;inc < 9 ;inc++) {
-        
-        if (arr[inc] > max) {
-            max = arr[inc];
-        }
-        
-            
-    }
-    cout << max << endl;
+//    int max        = 0;
+//    int inc        = 0;
+//    
+//    
+//    for (inc ;inc <  ;inc++) {
+//        
+//        if (arr[inc] > max) {
+//            max = arr[inc];
+//        }
+//        
+//            
+//    }
+//    cout << max << endl;
     
     //3 - finding the min number iside an array
-    int min        = arr[0];
-    int inc        = 0;
-    
-    
-    for (inc ;inc < 11 ;inc++) {
-        
-        if (arr[inc] < min) {
-            min = arr[inc];
-        } else {
-            min = arr[0];
-        }
-        
-            
-    }
-    cout << min << endl;
+//            int min        = arr[0];
+//            int inc        = 0;
+//
+//
+//            for (inc ;inc < 10 ;inc++) {
+//
+//                if (arr[inc] < min) {
+//                    min = arr[inc];
+//                }
+//
+//
+//            }
+//            cout << min << endl;
     
     // 4 - serching for the index of an value inside an array
     
-    int searchIndex        = 0;
-    int inc                = 0;
-    int val = 89;
+//    int searchIndex        = 0;
+//    int inc                = 0;
+//    int val = 89;
+//    
+//    
+//    for (inc ;inc < 11 ;inc++) {
+//        
+//        if (arr[inc] == val) {
+//            searchIndex = inc;
+//        } 
+//    }
+//    cout << searchIndex << endl;
     
+    int _array[0];
     
-    for (inc ;inc < 11 ;inc++) {
-        
-        if (arr[inc] == val) {
-            searchIndex = inc;
-        } 
-    }
-    cout << searchIndex << endl;
+//    setArray(_array ,10);
+//    printArray(_array ,10);
     
-
+    //6 - below algorithm is for sorting an array ascending
+    //we are going to find the minimum value at each iteration and store it
+    
+     
     
     return 0;
 }
